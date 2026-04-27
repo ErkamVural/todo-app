@@ -38,7 +38,7 @@ app.get('/todos', async (req, res) => {
   res.json(result.rows);
 });
 
-app.post('/api/todos', async (req, res) => {
+app.post('/todos', async (req, res) => {
   console.log(`isteği alan container: ${process.env.HOSTNAME}`);
   const { title } = req.body;
   const result = await pool.query(
